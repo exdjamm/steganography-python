@@ -26,7 +26,7 @@ def bytes_message_to_text(byte_message: bytearray) -> str:
 	return result_bytearray.decode('utf-8')
 
 if __name__ == '__main__':
-	info_file = ('img_message', 'jpeg')
+	info_file = ('output/img_message', 'jpeg')
 
 	byte_array_file = read_bytes_file(info_file)
 	byte_array_message = get_two_bytes_significante(byte_array_file)

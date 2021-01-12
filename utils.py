@@ -1,6 +1,6 @@
 def read_bytes_file(info_file: tuple) -> bytearray:
-	file_name, file_extension = info_file
-	PATH_FILE = f"input/{file_name}.{file_extension}"
+	file_path_name, file_extension = info_file
+	PATH_FILE = f"{file_path_name}.{file_extension}"
 	METHOD = 'rb'
 	bytes_file = bytearray()
 
@@ -18,8 +18,8 @@ def write_bytes_to_file(info_file: tuple, file_bytearray: bytearray):
 	bytes_file: bytearray
 	contendo os bytes do arquivo a ser escrito.
 	"""	
-	file_name, file_extension = info_file
-	PATH_FILE = f"output/{file_name}.{file_extension}"
+	file_path_name, file_extension = info_file
+	PATH_FILE = f"{file_path_name}.{file_extension}"
 	METHOD = 'wb'
 
 	with open(PATH_FILE, METHOD) as file:
