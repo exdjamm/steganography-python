@@ -38,6 +38,8 @@ def slit_message_into_two_sig_bytes(bytearray_message: bytearray):
 
 		slit_bytes = [two_bytes_1, two_bytes_2,
 					  two_bytes_3, two_bytes_4]
+
+		slit_bytes.reverse()
 		slit_bytes = bytearray(slit_bytes)
 
 		result_bytearray += slit_bytes
