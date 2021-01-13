@@ -5,9 +5,9 @@ def get_two_bytes_significante(byte_array: bytearray, len_message: int) -> bytea
 
 	count_byte = 0
 	for byte in byte_array:
-		if count_byte == len_message -1:
+		if count_byte == len_message :
 			break
-
+		
 		two_byte = 0x3 & byte
 
 		result_bytearray.append(two_byte)
