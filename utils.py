@@ -4,7 +4,7 @@ def read_bytes_file(info_file: tuple) -> bytearray:
 	METHOD = 'rb'
 	bytes_file = bytearray()
 
-	with open(path_file, METHOD) as file:
+	with open(PATH_FILE, METHOD) as file:
 		 content_file = file.read()
 		 bytes_file = bytearray(content_file)
 
@@ -25,7 +25,7 @@ def write_bytes_to_file(info_file: tuple, file_bytearray: bytearray):
 	with open(PATH_FILE, METHOD) as file:
 		file_bytes = bytes(file_bytearray)
 		
-		file.write()
+		file.write(file_bytes)
 
 def slit_message_into_two_sig_bytes(bytearray_message: bytearray):
 	result_bytearray = bytearray()
