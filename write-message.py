@@ -5,8 +5,8 @@ def insert_message_into_bytes_file(byte_file, byte_message) -> bytearray:
 
 	count_byte = 1
 	for (byte_m, byte_f) in zip(byte_message, byte_file):
-		byte_f_corrected = ( (byte_f >> 2 ) << 2) ^ 3 
-		new_byte = byte_f_corrected ^ (byte_m)
+		byte_f_corrected = ( (byte_f >> 2 ) << 2)  
+		new_byte = byte_f_corrected | (byte_m)
 
 		result_bytes.append(new_byte)
 
