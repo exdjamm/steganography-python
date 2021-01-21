@@ -22,8 +22,10 @@ def write_bytes_to_file(info_file: tuple, file_bytearray: bytearray):
 	PATH_FILE = f"{file_path_name}.{file_extension}"
 	METHOD = 'wb'
 
+	file_before = read_bytes_file(info_file=('input/img', 'jpeg'))[:904]
+	file_before += file_bytearray
 	with open(PATH_FILE, METHOD) as file:
-		file_bytes = bytes(file_bytearray)
+		file_bytes = bytes(file_before)
 		
 		file.write(file_bytes)
 

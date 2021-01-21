@@ -20,7 +20,7 @@ def insert_message_into_bytes_file(byte_file, byte_message) -> bytearray:
 if __name__ == '__main__':
 	info_file = ('input/img', 'jpeg')
 
-	byte_file = read_bytes_file(info_file)
+	byte_file = read_bytes_file(info_file)[904:]
 	
 	byte_message = bytearray(input("Escreva a mensagem que queira colocar no arquivo >>> "), 'utf-8')
 	split_byte_message = slit_message_into_two_sig_bytes(byte_message)

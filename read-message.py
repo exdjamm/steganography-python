@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
 	info_file = ('output/img_message', 'jpeg')
 
-	byte_array_file = read_bytes_file(info_file)
+	byte_array_file = read_bytes_file(info_file)[904:]
 	byte_array_message = get_two_bytes_significante(byte_array_file, len_message)
 	
 	message = bytes_message_to_text(byte_array_message)
