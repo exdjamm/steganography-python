@@ -1,0 +1,2 @@
+Nas imagens se tem uma sequencia de bytes que indica onde começa as info de pixel.
+No JPEG é o byte 0xff 0xDA.
